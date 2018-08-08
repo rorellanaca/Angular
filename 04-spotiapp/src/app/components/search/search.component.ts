@@ -6,20 +6,20 @@ import { SpotifyService } from '../../services/spotify.service';
   templateUrl: './search.component.html',
   styles: []
 })
-export class SearchComponent{
+export class SearchComponent {
 
-  artistas : any[] = [];
+  artistas: any[] = [];
 
   constructor(private sportify: SpotifyService) {
   }
 
-  buscar(termino : string){
-    console.log(termino);
-    this.sportify.getArtist(termino)
-     .subscribe((data : any) =>{
-       console.log(data.artists.items);
-       this.artistas = data.artists.items;
-     });
+  buscar(termino: string) {
+    if ( termino.length > 0 ) {
+      this.sportify.getArtist(termino)
+       .subscribe((data: any) => {
+         this.artistas = data;
+       });
+    }
   }
 
 }

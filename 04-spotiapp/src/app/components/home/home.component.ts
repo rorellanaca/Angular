@@ -11,10 +11,11 @@ export class HomeComponent implements OnInit {
   nuevasCanciones: any[] = [];
 
   constructor(private sportify: SpotifyService) {
+
     this.sportify.getNewReleases()
-     .subscribe((data:any) =>{
-       console.log(data.albums.item);
-       this.nuevasCanciones = data.albums.items;
+     .subscribe((data: any) =>  {
+       console.log(data);
+       this.nuevasCanciones = data;
      });
   }
 
