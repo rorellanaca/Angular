@@ -1,3 +1,5 @@
+<app-loading *ngIf="loading"></app-loading>
+
 <div class="card-columns">
     <div *ngFor="let cancion of nuevasCanciones" class="card">
         <img class="card-img-top" [src]="cancion.images | noimage" alt="Card image cap">
