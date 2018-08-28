@@ -1,7 +1,10 @@
+
 <div class="row">
     <div class="col align-self-center">
         <input type="text" #temino placeholder="Buscar artista..." class="form-control" (keyup)="buscar(temino.value)">
     </div>
 </div>
+<br>
+<app-loading *ngIf="loading"></app-loading>
 
-<app-tarjetas [items]="artistas"></app-tarjetas>
+<app-tarjetas [items]="artistas"></app-tarjetas><app-tarjetas [items]="artistas"></app-tarjetas>
