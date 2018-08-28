@@ -15,13 +15,16 @@ export class SearchComponent {
   }
 
   buscar(termino: string) {
-    this.loading = true;
-
+      if(termino.length > 0){
+      this.loading = true;
       this.sportify.getArtist(termino)
        .subscribe((data: any) => {
          this.artistas = data;
          this.loading = false;
        });
+    }else{
+      this.artistas = [];
+    }
   }
 
 }
