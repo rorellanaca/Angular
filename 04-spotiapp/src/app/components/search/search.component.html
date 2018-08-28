@@ -1,21 +1,7 @@
 <div class="row">
-    <div class="col">
+    <div class="col align-self-center">
         <input type="text" #temino placeholder="Buscar artista..." class="form-control" (keyup)="buscar(temino.value)">
     </div>
 </div>
 
-<div class="card-columns m-5">
-    <div *ngFor="let artista of artistas" class="card">
-        <img class="card-img-top" [src]="artista.images | noimage" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">
-                {{artista.name}}
-            </h5>
-            <p class="card-text">
-                <!-- <span *ngFor="let artista of cancion.artists" class="badge badge-pill badge-primary">
-          {{artista.popularity}}
-        </span> -->
-            </p>
-        </div>
-    </div>
-</div>
+<app-tarjetas [items]="artistas"></app-tarjetas>
