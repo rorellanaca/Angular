@@ -14,10 +14,9 @@ export class HomeComponent implements OnInit {
   constructor(private sportify: SpotifyService) {
 
     this.loading = true;
-    
+
     this.sportify.getNewReleases()
      .subscribe((data: any) =>  {
-       console.log(data);
        this.nuevasCanciones = data;
        this.loading = false;
      });
