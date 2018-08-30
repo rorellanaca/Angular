@@ -17,7 +17,7 @@ export class SearchComponent {
   buscar(termino: string) {
       if(termino.length > 0){
       this.loading = true;
-      this.sportify.getArtist(termino)
+      this.sportify.getArtists(termino)
        .subscribe((data: any) => {
          this.artistas = data;
          this.loading = false;
