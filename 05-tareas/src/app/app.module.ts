@@ -11,12 +11,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 //Componentes
 import { PendientesPage } from '../pages/pendientes/pendientes.component';
 import { TerminadosPage } from '../pages/teminados/terminados.component';
+import { AgregarPage } from '../pages/agregar/agregar.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 //Servicios
 import { TareasService } from '../services/tareas.service';
+
 
 
 
@@ -28,7 +30,8 @@ import { TareasService } from '../services/tareas.service';
     HomePage,
     TabsPage,
     PendientesPage,
-    TerminadosPage
+    TerminadosPage,
+    AgregarPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { TareasService } from '../services/tareas.service';
     HomePage,
     TabsPage,
     PendientesPage,
-    TerminadosPage
+    TerminadosPage,
+    AgregarPage
   ],
   providers: [
     StatusBar,

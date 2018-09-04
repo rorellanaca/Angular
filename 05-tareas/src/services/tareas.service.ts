@@ -6,9 +6,21 @@ export class TareasService {
 
     listas: Lista[] = [];
     constructor(){
-      const lista1 = new Lista('Recolectar piedras del infinto');
-      const lista2 = new Lista('Herores a vences')
+        this.cargarStorage();
+    }
 
-      this.listas.push(lista1,lista2);
+    agregarLista(lista: Lista){
+      this.listas.push(lista);
+      this.guardarStorage();
+    }
+
+    guardarStorage(){
+      localStorage.setItem('data', JSON.stringify(this.listas));
+    }
+
+    cargarStorage(){
+       if(localStorage.getItem('data')){
+         this.listas = JSON.parse(localStorage.getItem('data'));
+       }
     }
 }
