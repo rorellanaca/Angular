@@ -18,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 //Servicios
 import { TareasService } from '../services/tareas.service';
+import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completado';
 
 
 
@@ -31,7 +32,8 @@ import { TareasService } from '../services/tareas.service';
     TabsPage,
     PendientesPage,
     TerminadosPage,
-    AgregarPage
+    AgregarPage,
+    FiltroCompletadoPipe
   ],
   imports: [
     BrowserModule,

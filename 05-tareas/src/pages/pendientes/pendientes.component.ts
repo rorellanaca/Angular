@@ -16,11 +16,17 @@ export class PendientesPage {
   constructor(public tareasService: TareasService,
               private navCtrl: NavController,
               private alertCtrl: AlertController){
-
   }
 
   listaSeleccionada(lista: Lista){
-      console.log(lista);
+    this.navCtrl.push( AgregarPage,{
+      titulo: lista.titulo,
+      Lista: lista
+    });     
+  }
+
+  borrar(lista: Lista){
+    this.tareasService.borrarLista(lista);
   }
 
   agregarLista(){
