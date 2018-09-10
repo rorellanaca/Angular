@@ -1,0 +1,24 @@
+<ion-list>
+    <ion-item-sliding #slidingItem *ngFor="let lista of tareasService.listas | filtroCompletado:terminada">
+
+        <ion-item-options side="left">
+            <button ion-button color="info" icon-only (click)="editar(lista,slidingItem)">
+                    <ion-icon name="create"></ion-icon>
+            </button>
+        </ion-item-options>
+
+        <button ion-item (click)="listaSeleccionada(lista)">
+            {{ lista.titulo }}
+            <ion-note item-end>
+                {{ lista.items.length }} items
+            </ion-note>
+        </button>
+
+        <ion-item-options side="rigth">
+            <button ion-button color="danger" icon-only (click)="borrar(lista)">
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-item-options>
+
+    </ion-item-sliding>
+</ion-list>

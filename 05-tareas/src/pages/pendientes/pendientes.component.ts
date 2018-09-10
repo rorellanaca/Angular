@@ -18,16 +18,8 @@ export class PendientesPage {
               private alertCtrl: AlertController){
   }
 
-  listaSeleccionada(lista: Lista){
-    this.navCtrl.push( AgregarPage,{
-      titulo: lista.titulo,
-      Lista: lista
-    });     
-  }
+ 
 
-  borrar(lista: Lista){
-    this.tareasService.borrarLista(lista);
-  }
 
   agregarLista(){
       const alerta = this.alertCtrl.create({

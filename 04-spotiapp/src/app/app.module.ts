@@ -17,6 +17,8 @@ import { ROUTES } from './app.routes';
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { PruebaComponent } from './prueba/prueba.component';
+import { Prueba2Component } from './components/prueba2/prueba2.component';
 
 
 
@@ -33,7 +35,9 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     NoimagePipe,
     DomseguroPipe,
     TarjetasComponent,
-    LoadingComponent
+    LoadingComponent,
+    PruebaComponent,
+    Prueba2Component
   ],
   imports: [
     BrowserModule,

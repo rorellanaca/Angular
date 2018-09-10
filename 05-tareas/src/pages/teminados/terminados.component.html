@@ -6,10 +6,6 @@
 
 <ion-content>
 
-    <ion-list>
-        <button ion-item *ngFor="let lista of tareasService.listas | filtroCompletado:true" (click)="listaSeleccionada(lista)">
-      {{ lista.titulo }}
-    </button>
-    </ion-list>
+    <app-listas [terminada]="true"></app-listas>
 
 </ion-content>

@@ -46,7 +46,7 @@ export class AgregarPage {
 
     const pendientes = this.lista.items.filter(itemData =>{
       return !itemData.completado;
-    }).length;
+    }).length; 
 
     if(pendientes === 0){
       this.lista.terminada = true;
